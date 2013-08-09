@@ -1,0 +1,1 @@
+On my machine, this is in /opt/gbdk/examples/gb/gbc1. If you download the GBDK (google it, it's the sourceforge link) and put gbc1.c into gbdk/examples/gb/gbc1/, you should be able to make it without modifying the Makefile at all.
