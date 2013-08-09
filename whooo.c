@@ -4,8 +4,8 @@
 
 
 const UWORD backgroundpalette[] = {
-	31*1024, 31*32, 31, 0,
-	31*1024, 31*32, 31, 0
+	RGB_BLACK, RGB_DARKGRAY, RGB_LIGHTGRAY, RGB_WHITE,
+	RGB_RED, RGB_YELLOW, RGB_BLUE, RGB_GREEN
 };
 unsigned char backgroundcharacters[] = {
 	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
