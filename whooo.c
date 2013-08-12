@@ -4,7 +4,7 @@
 
 
 const UWORD spritepalette[] = {
-	RGB_BLACK, RGB_DARKGRAY, RGB_RED, RGB_LIGHTFLESH
+	32301, 430, 27, 2783
 };
 
 unsigned char spritetiles[] = {

@@ -1,6 +1,10 @@
 from PIL import Image as image
 import sys,getopt
 	#args: file, transparent_r, transparent_g, transparent_b, x, y, width, height, filename
+
+def colorint(colortuple):
+	return colortuple[0]/8 + colortuple[1]/8*32 + colortuple[2]/8*1024
+
 def main(argv):
 	img = image.open(argv[0])
 	r,g,b = int(argv[1]), int(argv[2]), int(argv[3])
@@ -31,8 +35,7 @@ def main(argv):
 				palette.append(color)
 			row.append(idx)
 		palettized.append(row)
-	print palette
-	print palettized
+		
 	bytes = []
 	for spritex in range(width/8):
 		for spritey in range(height/8):
@@ -53,7 +56,13 @@ def main(argv):
 				bytes.append(highbyte)
 				bytes.append(lowbyte)
 	print bytes
+	palette.append((0,0,0))
+	palette.append((0,0,0))
+	palette.append((0,0,0))
+	print (colorint(palette[0]), colorint(palette[2]), colorint(palette[1]), colorint(palette[3]))
+	
 					
 		
 if __name__ == "__main__":
 	main(sys.argv[1:])
+	
